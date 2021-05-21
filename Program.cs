@@ -1,19 +1,25 @@
 ﻿using System;
-Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-Console.WriteLine("--------------------------------------------");
-Console.WriteLine();
 
-// Let the moose speak!
-MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("I really am enthusiastic");
+Main();
 
-// Ask some questions
-CanadaQuestion();
-EnthusiasticQuestion();
-LoveCSharpQuestion();
-SecretQuestion();
+void Main()
+{
+    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+    Console.WriteLine("--------------------------------------------");
+    Console.WriteLine();
 
-// 
+    // Let the moose speak!
+    MooseSays("H I, I'M  E N T H U S I A S T I C !");
+    MooseSays("I really am enthusiastic");
+
+    // Ask some questions
+    CanadaQuestion();
+    EnthusiasticQuestion();
+    LoveCSharpQuestion();
+    SecretQuestion();
+}
+
+// the moose will ask a yes or no question
 bool MooseAsks(string question)
 {
     Console.Write($"{question} (Y/N): ");
@@ -35,6 +41,7 @@ bool MooseAsks(string question)
     }
 }
 
+// ------------- begin questions --------------
 void CanadaQuestion()
 {
     bool isTrue = MooseAsks("Is Canada real?");
@@ -86,6 +93,7 @@ void SecretQuestion()
         MooseSays("Oh, no...secrets are the best, I love to share them!");
     }
 }
+// --------------- end questions -----------------
 
 void MooseSays(string message)
 {
